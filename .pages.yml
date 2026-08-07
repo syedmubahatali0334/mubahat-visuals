@@ -1,0 +1,57 @@
+media:
+  - name: project_images
+    label: Project Thumbnails
+    input: assets/images/projects
+    output: /assets/images/projects
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: portfolio_projects
+    label: Portfolio Projects
+    type: file
+    path: data/projects.json
+    format: json
+    list: true
+    fields:
+      - name: title
+        label: Project Title
+        type: string
+        required: true
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values:
+            - name: ugc-ai
+              label: UGC AI Ads
+            - name: editing
+              label: Editing
+            - name: 3d
+              label: 3D Animation
+            - name: motion
+              label: Motion Graphics
+            - name: web
+              label: Website Development
+      - name: thumbnail
+        label: Thumbnail
+        type: image
+        required: true
+        description: Upload a JPG, PNG or WebP thumbnail. 1600×1000 or a similar landscape ratio works best.
+        options:
+          media: project_images
+          extensions: [jpg, jpeg, png, webp]
+          rename: safe
+      - name: video_url
+        label: Video URL
+        type: string
+        description: Paste a YouTube Unlisted link, Vimeo link, or a direct MP4/WebM URL. Leave blank to open only the thumbnail.
+      - name: description
+        label: Short Description
+        type: text
+        description: One short sentence about the project.
+      - name: published
+        label: Show on Website
+        type: boolean
+        default: true
