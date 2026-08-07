@@ -1,0 +1,9 @@
+Portfolio videos are managed through Pages CMS.
+
+Recommended workflow:
+1. Upload the finished video to YouTube as Unlisted.
+2. Copy the video link.
+3. Open the website /admin/ page.
+4. Paste the link into the project’s Video URL field.
+
+Vimeo and direct MP4/WebM links are also supported.
