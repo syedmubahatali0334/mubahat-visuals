@@ -25,15 +25,23 @@ content:
         options:
           values:
             - name: ugc-ai
-              label: UGC AI Ads
-            - name: editing
-              label: Editing
-            - name: 3d
-              label: 3D Animation
+              label: UGC & AI Ads
+            - name: paid-ads
+              label: Paid Ads
+            - name: high-end-reels
+              label: High-End Reels
+            - name: vsl
+              label: VSLs
             - name: motion
-              label: Motion Graphics
+              label: Motion
+            - name: podcasts
+              label: Podcasts
             - name: web
-              label: Website Development
+              label: Website
+            - name: editing
+              label: Editing (Legacy)
+            - name: 3d
+              label: 3D Animation (Legacy)
       - name: thumbnail
         label: Thumbnail
         type: image

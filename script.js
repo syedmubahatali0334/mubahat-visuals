@@ -15,11 +15,25 @@ const SITE_CONFIG = {
 };
 
 const CATEGORY_LABELS = {
-  "ugc-ai": "UGC AI Ads",
+  "ugc-ai": "UGC & AI Ads",
+  "paid-ads": "Paid Ads",
+  "high-end-reels": "High-End Reels",
+  vsl: "VSLs",
+  motion: "Motion",
+  podcasts: "Podcasts",
   editing: "Editing",
   "3d": "3D Animation",
-  motion: "Motion Graphics",
   web: "Website Development"
+};
+
+const FILTER_CATEGORY_MAP = {
+  "ugc-ai": ["ugc-ai"],
+  "paid-ads": ["paid-ads", "editing"],
+  "high-end-reels": ["high-end-reels", "editing"],
+  vsl: ["vsl", "editing"],
+  motion: ["motion"],
+  podcasts: ["podcasts", "editing"],
+  web: ["web"]
 };
 
 // Used only if projects.json cannot load, such as when index.html is opened directly with file://.
@@ -193,31 +207,6 @@ if ("IntersectionObserver" in window) {
   $$(".reveal").forEach((element) => element.classList.add("in-view"));
 }
 
-const counters = $$("[data-count]");
-if (counters.length && "IntersectionObserver" in window) {
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      const element = entry.target;
-      const target = Number(element.dataset.count);
-      const duration = 1000;
-      const start = performance.now();
-
-      const animate = (time) => {
-        const progress = Math.min((time - start) / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        element.textContent = Math.round(target * eased);
-        if (progress < 1) requestAnimationFrame(animate);
-      };
-
-      requestAnimationFrame(animate);
-      counterObserver.unobserve(element);
-    });
-  }, { threshold: 0.7 });
-
-  counters.forEach((counter) => counterObserver.observe(counter));
-}
-
 /* =========================================================
    PORTFOLIO — DATA COMES FROM data/projects.json
 ========================================================= */
@@ -257,9 +246,10 @@ async function loadPortfolio() {
 function renderPortfolio(filter = "all") {
   if (!portfolioGrid) return;
   activeFilter = filter;
+  const acceptedCategories = FILTER_CATEGORY_MAP[filter] || [filter];
   const items = filter === "all"
     ? portfolioItems
-    : portfolioItems.filter((item) => item.category === filter);
+    : portfolioItems.filter((item) => acceptedCategories.includes(item.category));
 
   if (!items.length) {
     portfolioGrid.innerHTML = `
@@ -484,3 +474,77 @@ if (websiteForm) {
 
 const currentYear = $("#currentYear");
 if (currentYear) currentYear.textContent = new Date().getFullYear();
+
+/* =========================================================
+   CLIENT FINAL — IMPACT COUNTERS
+   Visible count-up starts once when the Impact section scrolls into view.
+========================================================= */
+(() => {
+  const counters = [...document.querySelectorAll('.impact-number[data-count]')];
+  if (!counters.length) return;
+
+  const formatValue = (value, decimals, suffix) => {
+    const formatted = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString();
+    return `${formatted}${suffix}`;
+  };
+
+  const setStart = (el) => {
+    const decimals = Number(el.dataset.decimals || 0);
+    const suffix = el.dataset.suffix || '';
+    el.textContent = formatValue(0, decimals, suffix);
+  };
+
+  const setFinal = (el) => {
+    const target = Number(el.dataset.count || 0);
+    const decimals = Number(el.dataset.decimals || 0);
+    const suffix = el.dataset.suffix || '';
+    el.textContent = formatValue(target, decimals, suffix);
+  };
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion) {
+    counters.forEach(setFinal);
+    return;
+  }
+
+  counters.forEach(setStart);
+
+  const animateCounter = (el, index) => {
+    if (el.dataset.counted === 'true') return;
+    el.dataset.counted = 'true';
+
+    const target = Number(el.dataset.count || 0);
+    const decimals = Number(el.dataset.decimals || 0);
+    const suffix = el.dataset.suffix || '';
+    const duration = target >= 1000 ? 2100 : 1750;
+    const delay = index * 90;
+
+    window.setTimeout(() => {
+      const start = performance.now();
+      const frame = (now) => {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = target * eased;
+        el.textContent = formatValue(current, decimals, suffix);
+        if (progress < 1) requestAnimationFrame(frame);
+        else setFinal(el);
+      };
+      requestAnimationFrame(frame);
+    }, delay);
+  };
+
+  const impactSection = document.querySelector('#impact');
+  if (!impactSection || !('IntersectionObserver' in window)) {
+    counters.forEach(animateCounter);
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries.some((entry) => entry.isIntersecting && entry.intersectionRatio >= 0.22);
+    if (!visible) return;
+    counters.forEach(animateCounter);
+    observer.disconnect();
+  }, { threshold: [0.22, 0.35], rootMargin: '0px 0px -8% 0px' });
+
+  observer.observe(impactSection);
+})();

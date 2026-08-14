@@ -756,3 +756,224 @@ html { scroll-padding-top: 112px; }
 .website-followup-note { margin: 14px 6px 0; color: #d6d0c8; font-size: 11px; line-height: 1.65; text-align: center; }
 .website-followup-note::before { content: "✓"; margin-right: 7px; color: var(--orange-bright); font-weight: 800; }
 @media (max-width: 760px) { .website-form-compact .form-grid-two { gap: 12px; } }
+
+
+/* =========================================================
+   CLIENT CONTENT UPDATE — 2026-08-14
+   Keeps the existing Mubahat Visuals design system intact.
+========================================================= */
+.service-number { display: block; min-height: 30px; line-height: 1.45; }
+.service-card { min-height: 370px; }
+.service-icon { margin-top: 34px; }
+
+.process-compact {
+  background: #0e0e0e;
+  border-top: 1px solid rgba(255,255,255,.05);
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+.process-compact-heading { align-items: end; }
+.process-compact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.process-compact-card {
+  position: relative;
+  min-height: 300px;
+  padding: 30px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  transition: transform .3s ease, border-color .3s ease, background .3s ease;
+}
+.process-compact-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(255,122,26,.4);
+  background: #151310;
+}
+.process-compact-card > span { color: var(--orange); font: 700 12px "Space Grotesk", sans-serif; }
+.process-compact-card h3 { margin-top: 48px; font: 600 25px/1.05 "Space Grotesk", sans-serif; letter-spacing: -.035em; }
+.process-compact-card p { margin-top: 14px; color: var(--muted); font-size: 13px; }
+.process-compact-card i { position: absolute; right: 28px; bottom: 25px; color: var(--orange); font-style: normal; }
+
+.impact { padding-top: 70px; padding-bottom: 78px; background: #0b0b0b; border-top: 1px solid var(--line); }
+.impact-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 42px; }
+.impact-heading h2 { max-width: 900px; font-family: "Space Grotesk", sans-serif; font-size: clamp(38px,4.7vw,66px); line-height: .98; letter-spacing: -.05em; }
+.impact-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.impact-grid > div { min-height: 155px; padding: 28px; display: flex; flex-direction: column; justify-content: end; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.impact-grid strong { font-family: "Space Grotesk", sans-serif; font-size: clamp(36px,4vw,58px); line-height: 1; letter-spacing: -.045em; }
+.impact-grid span { margin-top: 9px; color: var(--muted); font-size: 13px; }
+
+.testimonial-card .quote-mark { font-family: "Space Grotesk", sans-serif; font-size: 18px; font-weight: 700; line-height: 1; }
+
+@media (max-width: 980px) {
+  .process-compact-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .impact-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 640px) {
+  .process-compact-grid, .impact-grid { grid-template-columns: 1fr; }
+  .process-compact-card { min-height: 250px; }
+  .impact-heading { align-items: flex-start; flex-direction: column; }
+}
+.showreel-topline span:first-child { color: var(--orange); }
+.testimonial-card h3 { margin-top: 22px; font-family: "Space Grotesk", sans-serif; font-size: 24px; letter-spacing: -.035em; }
+.testimonial-card h3 + p { margin-top: 14px; }
+
+/* =========================================================
+   CLIENT FINAL — IMPACT COUNTERS + SCROLLING REVIEW STRIP
+========================================================= */
+.showreel-brand-label { color: var(--orange); }
+
+.impact-number {
+  display: inline-block;
+  min-width: 4.6ch;
+  font-variant-numeric: tabular-nums;
+  will-change: contents;
+}
+
+.reviews-strip {
+  position: relative;
+  overflow: hidden;
+  padding: 52px 0 64px;
+  background: #0d0d0d;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.reviews-strip::before,
+.reviews-strip::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 102px;
+  bottom: 26px;
+  width: min(11vw, 150px);
+  pointer-events: none;
+}
+.reviews-strip::before { left: 0; background: linear-gradient(90deg, #0d0d0d, transparent); }
+.reviews-strip::after { right: 0; background: linear-gradient(270deg, #0d0d0d, transparent); }
+.reviews-strip-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-bottom: 22px;
+}
+.reviews-strip-heading .eyebrow { margin: 0; }
+.reviews-strip-note { color: var(--muted); font-size: 13px; text-align: right; }
+.review-marquee { width: 100%; overflow: hidden; }
+.review-marquee-track {
+  width: max-content;
+  display: flex;
+  align-items: stretch;
+  gap: 14px;
+  padding: 2px 7px 6px;
+  animation: clientReviewMarquee 34s linear infinite;
+}
+.review-marquee:hover .review-marquee-track { animation-play-state: paused; }
+.review-pill {
+  width: clamp(330px, 34vw, 510px);
+  min-height: 120px;
+  padding: 22px 24px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(255,255,255,.035), rgba(255,122,26,.035));
+  box-shadow: 0 14px 40px rgba(0,0,0,.18);
+}
+.review-stars {
+  color: var(--orange);
+  font-size: 14px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+.review-pill p {
+  max-width: 310px;
+  color: #e4dfd8;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.review-pill strong {
+  color: #817b74;
+  font: 700 10px "Space Grotesk", sans-serif;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+@keyframes clientReviewMarquee { to { transform: translateX(calc(-50% - 7px)); } }
+
+@media (max-width: 760px) {
+  .reviews-strip { padding: 42px 0 52px; }
+  .reviews-strip-heading { align-items: flex-start; flex-direction: column; }
+  .reviews-strip-note { text-align: left; }
+  .review-pill { width: min(84vw, 410px); grid-template-columns: 1fr; gap: 8px; }
+  .review-pill p { max-width: none; }
+  .review-marquee-track { animation-duration: 30s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .review-marquee-track { animation: none; }
+}
+
+
+/* =========================================================
+   CLIENT REQUIREMENTS V2 — WEBSITE SERVICE + IMPACT POLISH
+========================================================= */
+.impact-number {
+  min-width: 5.4ch;
+  font-variant-numeric: tabular-nums lining-nums;
+  letter-spacing: -.045em;
+}
+.work-heading { align-items: flex-end; }
+.filter-tabs { max-width: 650px; margin-left: auto; }
+.filter-button[data-filter="web"] { border-color: rgba(255,122,26,.32); }
+.service-card:nth-child(9) { background: linear-gradient(145deg, rgba(255,122,26,.035), transparent 70%); }
+@media (max-width: 980px) {
+  .filter-tabs { max-width: none; margin-left: 0; }
+}
+
+/* =========================================================
+   CLIENT REVIEW V3 — keep THE IMPACT and HOW IT WORKS as
+   two clearly separate visual sections, per supplied brief.
+========================================================= */
+#impact.impact {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(255, 122, 26, .09), transparent 31%),
+    #0b0b0b;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+#impact .impact-grid {
+  margin-top: 4px;
+}
+
+#how-it-works.process {
+  position: relative;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background: var(--text);
+  color: var(--black);
+  border-top: 1px solid rgba(0,0,0,.12);
+}
+
+#how-it-works.process::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(1320px, calc(100% - 48px));
+  height: 3px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, var(--orange), rgba(255,122,26,.10) 42%, transparent 76%);
+}
+
+@media (max-width: 700px) {
+  #impact.impact { padding-top: 72px; padding-bottom: 72px; }
+  #how-it-works.process { padding-top: 82px; padding-bottom: 82px; }
+  #how-it-works.process::before { width: calc(100% - 32px); }
+}
