@@ -2,15 +2,15 @@
   {
     "title": "UGC AI Ad Campaign",
     "category": "ugc-ai",
-    "thumbnail": "assets/images/work-07.jpg",
+    "thumbnail": "/assets/images/projects/screenshot-2026-08-29-063954.png",
     "video_url": "https://youtube.com/shorts/WXqgy02YiA4?feature=share",
     "description": "Performance-focused UGC AI creative with a natural visual style.",
     "published": true
   },
   {
-    "title": "Mubahat Visuals Web Experience",
-    "category": "web",
-    "thumbnail": "assets/images/work-08.jpg",
+    "title": "High End Reels",
+    "category": "high-end-reels",
+    "thumbnail": "/assets/images/projects/screenshot-2026-08-29-064145.png",
     "description": "A responsive creative-studio website with a clear conversion path and CMS-ready portfolio workflow.",
     "published": true
   },
