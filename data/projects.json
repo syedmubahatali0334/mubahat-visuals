@@ -35,6 +35,7 @@
     "title": "High End Reels",
     "category": "high-end-reels",
     "thumbnail": "/assets/images/projects/screenshot-2026-08-29-064145.png",
+    "video_url": "https://youtube.com/shorts/Nxh3ZrgAuV8?feature=share",
     "description": "A responsive creative-studio website with a clear conversion path and CMS-ready portfolio workflow.",
     "published": true
   },
@@ -78,6 +79,30 @@
     "category": "motion",
     "thumbnail": "assets/images/work-06.jpg",
     "description": "A flexible motion identity system for creator-led content.",
+    "published": true
+  },
+  {
+    "title": "High End Reels",
+    "category": "high-end-reels",
+    "thumbnail": "/assets/images/projects/screenshot-2026-08-29-065549.png",
+    "video_url": "https://youtube.com/shorts/ulvFkAXHMlc?feature=share",
+    "description": "A responsive creative-studio website with a clear conversion path and CMS-ready portfolio workflow.",
+    "published": true
+  },
+  {
+    "title": "High End Reels",
+    "category": "high-end-reels",
+    "thumbnail": "/assets/images/projects/screenshot-2026-08-29-065734.png",
+    "video_url": "https://youtube.com/shorts/IBVbzpiZhEQ?feature=share",
+    "description": "A responsive creative-studio website with a clear conversion path and CMS-ready portfolio workflow.",
+    "published": true
+  },
+  {
+    "title": "High End Reels",
+    "category": "high-end-reels",
+    "thumbnail": "/assets/images/projects/screenshot-2026-08-29-065851.png",
+    "video_url": "https://youtube.com/shorts/WJ0fak63Glg?feature=share",
+    "description": "A responsive creative-studio website with a clear conversion path and CMS-ready portfolio workflow.",
     "published": true
   }
 ]
