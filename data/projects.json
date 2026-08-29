@@ -117,5 +117,12 @@
     "thumbnail": "assets/images/work-05.jpg",
     "description": "An architectural 3D study with controlled lighting and camera motion.",
     "published": true
+  },
+  {
+    "title": "VSL's & Long form Video Edits",
+    "category": "vsl",
+    "thumbnail": "/assets/images/projects/screenshot-2026-08-29-072145.png",
+    "video_url": "https://youtu.be/4X2NdrURn-g",
+    "published": true
   }
 ]
