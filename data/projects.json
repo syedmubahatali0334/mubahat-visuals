@@ -3,7 +3,7 @@
     "title": "UGC AI Ad Campaign",
     "category": "ugc-ai",
     "thumbnail": "assets/images/work-07.jpg",
-    "video_url": "",
+    "video_url": "https://youtube.com/shorts/WXqgy02YiA4?feature=share",
     "description": "Performance-focused UGC AI creative with a natural visual style.",
     "published": true
   },
@@ -11,7 +11,6 @@
     "title": "Mubahat Visuals Web Experience",
     "category": "web",
     "thumbnail": "assets/images/work-08.jpg",
-    "video_url": "",
     "description": "A responsive creative-studio website with a clear conversion path and CMS-ready portfolio workflow.",
     "published": true
   },
@@ -19,7 +18,6 @@
     "title": "Automotive Launch Film",
     "category": "editing",
     "thumbnail": "assets/images/work-01.jpg",
-    "video_url": "",
     "description": "Cinematic editing and sound-led pacing for an automotive launch.",
     "published": true
   },
@@ -27,7 +25,6 @@
     "title": "Future Product World",
     "category": "3d",
     "thumbnail": "assets/images/work-02.jpg",
-    "video_url": "",
     "description": "A polished 3D product-film layout built around materials and motion.",
     "published": true
   },
@@ -35,7 +32,6 @@
     "title": "Fashion Brand Motion",
     "category": "motion",
     "thumbnail": "assets/images/work-03.jpg",
-    "video_url": "",
     "description": "Brand motion graphics designed for a fast-paced social campaign.",
     "published": true
   },
@@ -43,7 +39,6 @@
     "title": "Performance Ad Series",
     "category": "editing",
     "thumbnail": "assets/images/work-04.jpg",
-    "video_url": "",
     "description": "Commercial edits shaped around clarity, retention and conversion.",
     "published": true
   },
@@ -51,7 +46,6 @@
     "title": "Architectural Motion Study",
     "category": "3d",
     "thumbnail": "assets/images/work-05.jpg",
-    "video_url": "",
     "description": "An architectural 3D study with controlled lighting and camera motion.",
     "published": true
   },
@@ -59,7 +53,6 @@
     "title": "Creator Identity Package",
     "category": "motion",
     "thumbnail": "assets/images/work-06.jpg",
-    "video_url": "",
     "description": "A flexible motion identity system for creator-led content.",
     "published": true
   }
