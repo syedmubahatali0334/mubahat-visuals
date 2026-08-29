@@ -8,6 +8,14 @@
     "published": true
   },
   {
+    "title": "UGC AI Ad Campaign",
+    "category": "ugc-ai",
+    "thumbnail": "/assets/images/projects/screenshot-2026-08-29-064726.png",
+    "video_url": "https://youtube.com/shorts/0gO52V6csb0?feature=share",
+    "description": "Performance-focused UGC AI creative with a natural visual style.",
+    "published": true
+  },
+  {
     "title": "High End Reels",
     "category": "high-end-reels",
     "thumbnail": "/assets/images/projects/screenshot-2026-08-29-064145.png",
@@ -54,14 +62,6 @@
     "category": "motion",
     "thumbnail": "assets/images/work-06.jpg",
     "description": "A flexible motion identity system for creator-led content.",
-    "published": true
-  },
-  {
-    "title": "UGC AI Ad Campaign",
-    "category": "ugc-ai",
-    "thumbnail": "/assets/images/projects/screenshot-2026-08-29-064726.png",
-    "video_url": "https://youtube.com/shorts/0gO52V6csb0?feature=share",
-    "description": "Performance-focused UGC AI creative with a natural visual style.",
     "published": true
   }
 ]
