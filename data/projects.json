@@ -72,23 +72,10 @@
     "published": true
   },
   {
-    "title": "Automotive Launch Film",
-    "category": "editing",
-    "thumbnail": "assets/images/work-01.jpg",
-    "description": "Cinematic editing and sound-led pacing for an automotive launch.",
-    "published": true
-  },
-  {
-    "title": "Future Product World",
-    "category": "3d",
-    "thumbnail": "assets/images/work-02.jpg",
-    "description": "A polished 3D product-film layout built around materials and motion.",
-    "published": true
-  },
-  {
-    "title": "Fashion Brand Motion",
+    "title": "Motion Graphics Ads Reel",
     "category": "motion",
-    "thumbnail": "assets/images/work-03.jpg",
+    "thumbnail": "/assets/images/projects/screenshot-2026-08-29-071035.png",
+    "video_url": "https://youtube.com/shorts/fVjRnZpD2Ds?feature=share",
     "description": "Brand motion graphics designed for a fast-paced social campaign.",
     "published": true
   },
@@ -111,6 +98,30 @@
     "category": "motion",
     "thumbnail": "assets/images/work-06.jpg",
     "description": "A flexible motion identity system for creator-led content.",
+    "published": true
+  },
+  {
+    "title": "Motion Graphics Ads Reel",
+    "category": "motion",
+    "thumbnail": "/assets/images/projects/screenshot-2026-08-29-071218.png",
+    "video_url": "https://youtube.com/shorts/vrJ7Tz4JR2o?feature=share",
+    "description": "Brand motion graphics designed for a fast-paced social campaign.",
+    "published": true
+  },
+  {
+    "title": "Motion Graphics Ads Reel",
+    "category": "motion",
+    "thumbnail": "/assets/images/projects/screenshot-2026-08-29-071324.png",
+    "video_url": "https://youtube.com/shorts/G9Q37Rtb8qg?feature=share",
+    "description": "Brand motion graphics designed for a fast-paced social campaign.",
+    "published": true
+  },
+  {
+    "title": "Motion Graphics Ads Reel",
+    "category": "motion",
+    "thumbnail": "/assets/images/projects/screenshot-2026-08-29-071430.png",
+    "video_url": "https://youtube.com/shorts/1BoPYfaSogM?feature=share",
+    "description": "Brand motion graphics designed for a fast-paced social campaign.",
     "published": true
   }
 ]
