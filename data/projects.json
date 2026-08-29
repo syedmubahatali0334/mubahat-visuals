@@ -138,5 +138,12 @@
     "thumbnail": "/assets/images/projects/screenshot-2026-08-29-072503.png",
     "video_url": "https://youtu.be/FGUwgbiqiMQ",
     "published": true
+  },
+  {
+    "title": "Podcast Edit Style",
+    "category": "podcasts",
+    "thumbnail": "/assets/images/projects/screenshot-2026-08-29-072659.png",
+    "video_url": "https://youtube.com/shorts/CLF_u5ot-pA?feature=share",
+    "published": true
   }
 ]
